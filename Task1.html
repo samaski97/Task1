@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+      /* اول لاين فوق متجمع فيه اللينكات */
+header {
+    background-color: #261d4d; 
+    color: white; 
+    padding: 10px 20px; 
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    font-family: Arial, sans-serif;
+}
+
+/* تنسيق العنوان "HTML Mastery" */
+header .logo {
+    color: white; 
+    text-decoration: none; 
+    font-size: 1em; 
+    font-weight: bold; 
+}
+
+/* تنسيق بقية الروابط*/
+header nav a {
+    color: white; 
+    text-decoration: none; 
+    margin-left: 20px; 
+    font-size: 1em;
+}
+
+header nav { display: flex; }
+
+/*تنسيق البار البنفسجي*/
+#hero-section {
+    margin: 30px auto; 
+    background-color: #3c31b9; 
+    color: white; 
+    padding: 60px 20px; 
+    text-align: center;
+    border-radius: 12px; /*سألت جيم فيها */
+}
+
+.primary-button {
+    background-color: #4CAF50;
+    color: white; 
+    padding: 10px 25px; 
+    border: none; 
+    cursor: pointer; 
+    margin-top: 25px; 
+    font-size: 1.1em;
+    border-radius: 30px; 
+}
+
+
+/* ------------------------------------------------------------------ */
+
+/* تنسيق السكاشن */
+.section-card {
+    background-color: white; 
+    padding: 25px; 
+    border-radius: 8px; 
+    margin-bottom: 20px;  
+    border: 1px solid #eee; 
+}
+
+/* تنسيق عناوين البطاقات */
+.section-card h2 {
+    color: #584DDB; 
+    margin-top: 0; /*سألت جيم في الستايلنج هنا */
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/*تنسيق السكشن الخامس*/
+.media-flex-group {
+    display: flex;/*عشان يبقوا جمب بعض*/
+    gap: 50px; 
+    margin-bottom: 20px;
+    align-items: flex-start; 
+}
+ /* حجم عمود الصورة*/
+.media-flex-group .image-item {
+    flex: 0 0 120px; /*سألت جيم فيها*/
+}
+
+/* المساحة الفاضية*/
+.media-flex-group .links-item {
+    flex: 1; 
+}
+
+/* تنسيق الصورة*/
+.html-logo {
+    max-width: 80px;
+    height: 80px; 
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #CCCCFF; 
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1em;
+    font-weight: bold;
+    border: 1px solid #7777FF;
+}
+
+/* تنسيق الزر الأخضر */
+.image-link-button {
+    background-color: #2fcf77;
+    color: rgb(186, 247, 204);/*كانت مشروحة في سيشن السي اس اس */
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+/* تنسيق مشغل الفيديو */
+.video-placeholder {
+    background-color: #e0e0e0;
+    color: #555;
+    text-align: center;
+    padding: 40px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    min-height: 100px;
+}
+
+/* تنسيق الـ iframe */
+.iframe-placeholder {
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #f9f9f9;
+    font-size: 0.9em;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* ------------------------------------------------------------------ */
+
+/*تنسيق السكشن السادس*/
+table {
+    border-collapse: collapse; 
+    width: 100%; 
+th, td {
+    border: 1px solid #ccc; 
+    padding: 8px; 
+    text-align: left;
+}}
+thead {
+    background-color: #f2f2f2; 
+}
+
+/* ------------------------------------------------------------------ */
+
+
+/*تنسيق سكشن سبعة وتسعة*/
+.sidebar .section-card {
+    display: block; 
+    width: 100%; 
+}
+
+/*تنسيق سكشن تسعة*/
+.aside-highlight {
+    border-left: 5px solid #37d47b; 
+    padding-left: 10px;
+    margin-top: 15px;
+    background-color: #a1fda1; 
+    padding: 10px;
+    border-radius: 4px;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
+
+/* ------------------------------------------------------------------ */
+
+/*تنسيق السكشن السابع*/
+.form-group {
+    margin-bottom: 15px; 
+}
+
+.section-card input[type="text"],
+.section-card input[type="email"],
+.section-card select,
+.section-card textarea {
+    width: 100%; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* واخداها من جيم عشان المساحة متزيدش عن الحجم المطلوب*/
+}
+
+.submit-button {
+    background-color: #584DDB; 
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* ------------------------------------------------------------------ */
+
+footer {
+    background-color: #333; 
+    color: white;
+    text-align: center; 
+    padding: 15px 0;
+    
+}
+footer p {
+    margin: 0; 
+    font-size: 0.9em;
+}
+    </style>
+</head>
+
+
+<body>
+   <body>
+    <header>
+        <a href="#"; class="logo">HTML Mastery</a> 
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tags</a>
+            <a href="#">Task</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+<!--.....................................................................-->
+
+    <section id="hero-section">
+        <h1>Learn HTML by Live Examples</h1>
+        <p>This page contains **live examples** of all HTML essentials, proving that mastering basic tags is the **"foundation"** of web development.</p>
+        <button class="primary-button">Get Started</button>
+    </section>
+
+<!--.....................................................................-->
+
+<main style="display: flex; gap: 30px; padding: 20px; margin: 0 auto;"> 
+     
+    <div class="main-content" style="flex: 2;">
+     <div class="section-card">
+      <h2>3. Text & Formatting Elements</h2>
+      <h3>Basic Text Structure</h3>
+      <p>This is a standard paragraph (p). We can emphasize words by making them <strong>bold using the &lt;strong&gt; tag</strong> or show their importance using the <em>&lt;em&gt; tag</em>.</p>
+      <hr>
+      <p>Here is a line break:<br>
+      The text continues on a new line.</p>
+      <h3>Quotations and Code</h3>
+      <blockquote>
+        <p>The &lt;blockquote&gt; tag is perfect for long quotations from another source. It ensures semantic correctness.</p>
+      </blockquote>
+    <p>To display inline code, use the <code>console.log('Hello HTML!');</code> tag.</p>
+    </div>
+
+<!--.....................................................................-->
+
+  <div class="section-card">
+   <h2>4. List Examples</h2>
+     <div style="display: flex; gap: 50px;">
+      <div>
+        <h3>Unordered List (&lt;ul&gt;)</h3>
+        <ul>
+            <li>HTM=L Structure</li>
+            <li>CSS Style</li>
+            <li>JavaScript Behavior</li>
+        </ul>
+      </div>
+    
+      <div>
+        <h3>Ordered List (&lt;ol&gt;)</h3>
+        <ol>
+            <li>Dom Structure</li>
+            <li>Write Markup</li>
+            <li>Apply Styles</li>
+        </ol>
+      </div>
+    
+      <div>
+        <h3>Definition List (&lt;dl&gt;)</h3>
+         <dl>
+            <dt>HTTP</dt>
+            <dd>Hypertext Transfer Protocol</dd>
+            
+            <dt>SEO</dt>
+            <dd>Search Engine Optimization.</dd>
+        </dl>
+      </div>
+    </div>
+</div>
+
+<!--.....................................................................-->
+
+<div class="section-card">
+ <h2>5. Links and Media</h2>
+    
+    <div class="media-flex-group top-layout">
+        
+        <div class="layout-item image-item">
+            <h4 style="margin-bottom: 5px;">Standard Image:</h4>
+            <img src="html_logo.png" alt="HTML Logo" class="html-logo"> 
+        </div>
+
+        <div class="layout-item links-item">
+            <h4 style="margin-bottom: 5px;">Link Examples:</h4>
+            <p>External: <a href="https://developer.mozilla.org/...">Visit MDN Docs</a></p>
+            <p>Image link:</p>
+            <button class="image-link-button">Click Me</button>
+        </div>
+        
+    </div> <hr style="margin: 20px 0;"> <h3 style="margin-bottom: 15px;">Media Embeds</h3>
+    
+    <div class="media-flex-group media-players-layout">
+
+        <div class="layout-item audio-item">
+            <h4>Audio Player (&lt;audio&gt;):</h4>
+            <audio controls style="width: 100%;"></audio>
+        </div>
+
+        <div class="layout-item video-item">
+            <h4>Video Player (&lt;video&gt;):</h4>
+            <div class="video-placeholder">Video Placeholder</div>
+        </div>
+    </div>
+
+    <h4 style="margin-top: 20px;">External Iframe:</h4>
+    <div class="iframe-container">
+        <div class="iframe-placeholder">This space represents an &iframe;.</div>
+    </div>
+</div>
+
+<!--.....................................................................-->
+
+  <div class="section-card">
+    <h2>6. Table Example</h2>
+
+      <table>
+        <thead>
+         <tr>
+            <th>TAG NAME</th>
+            <th>CATEGORY</th>
+            <th>REQUIRED?</th>
+         </tr>
+        </thead>
+    
+       <tbody>
+         <tr>
+            <td>&lt;head&gt;</td>
+            <td>Metadata</td>
+            <td>Yes</td>
+         </tr>
+         <tr>
+            <td>&lt;nav&gt;</td>
+            <td>Semantic Layout</td>
+            <td>No</td>
+         </tr>
+         <tr>
+            <td>&lt;td&gt;</td>
+            <td>Table Content</td>
+            <td>Yes (In &lt;tr&gt;)</td>
+         </tr>
+       </tbody>
+      </table>
+
+<p>This table demonstrates proper usage of all table tags.</p>
+</div>
+</div>
+
+<!--.....................................................................-->
+
+
+<div class="sidebar" style="flex: 1; min-width: 250px;">
+ <div class="section-card"> 
+    <h2>9. Article & Aside Usage</h2>
+    <article>
+        This **&lt;article&gt;** element (simulated here) defines independent, self-contained, content, like a blog post or news story.
+    </article>
+    
+    <aside class="aside-highlight"> 
+        This surrounding area is the **&lt;aside&gt;** element, meant for content related to the main content but separate, like an ad or a glossary.
+    </aside>
+</div>
+
+<!--.....................................................................-->
+
+<div class="section-card">
+  <h2>7. Live Form Example</h2>
+    <form action="/submit-feedback" method="post">
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input type="text" id="full-name" placeholder="Youssef">
+        </div>
+        
+        <div class="form-group">
+            <label for="topic">Select Topic:</label>
+            <select id="topic">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+        </div>
+        
+        <button type="submit" class="submit-button">Send Feedback</button>
+    </form>
+</div>
+</div>
+
+</main>
+
+<!--.....................................................................-->
+
+<footer>
+    <p>© 2025 HTML Tags Playground. Created by Youssef - HTML Practice Page</p>
+</footer>
+
+</body>
+</html>
